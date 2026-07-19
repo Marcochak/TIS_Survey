@@ -789,6 +789,7 @@
       if (!res.ok) { const errBody = await res.json(); console.error('Airtable error:', JSON.stringify(errBody)); throw new Error(JSON.stringify(errBody)); }
 
       document.getElementById('formContent').classList.add('hidden');
+      document.querySelector('.header').classList.add('hidden');
       document.getElementById('successState').classList.add('visible');
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
