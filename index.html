@@ -371,7 +371,7 @@
 
     .form-content { display: block; }
     .form-content.hidden { display: none; }
-    .header.hidden { display: none; }
+    .subtitle.hidden { display: none; }
 
     @media (max-width: 480px) {
       body { padding: 32px 16px 64px; }
@@ -790,7 +790,7 @@
       if (!res.ok) { const errBody = await res.json(); console.error('Airtable error:', JSON.stringify(errBody)); throw new Error(JSON.stringify(errBody)); }
 
       document.getElementById('formContent').classList.add('hidden');
-      document.querySelector('.header').classList.add('hidden');
+      document.querySelector('.subtitle').classList.add('hidden');
       document.getElementById('successState').classList.add('visible');
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
